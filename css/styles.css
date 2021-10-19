@@ -1,0 +1,431 @@
+@import "./utilities.css";
+@import "./css_color_variables.css";
+@import "./Animations.css";
+@import "./flip-card.css";
+@import "./info-modal.css";
+@import "./queries.css";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: var(--body-background);
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;  
+    color: var(--primary-text);
+    /* width: 96%; */
+    
+    margin: auto;
+    box-shadow: 0 0 3px var(--primary-text);
+    overflow-x: hidden;
+
+}   
+.container{
+    width: 90%;
+    margin: auto;
+}
+header,
+.services{
+        /* background: linear-gradient(to right,var(--gradient-color-primary), var(--gradient-color-body-background), var(--gradient-color-primary)); */
+}
+
+/* PADDING for sections */
+header{
+    background: var(--body-background);
+    border-bottom: 1px solid var(--gradient-color-body-background);
+}
+.about,
+.tech,
+.contact{
+    /* background: var(--body-background); */
+    padding: 3.5% 0;
+}
+
+/* HEIGHT for sections */
+.services,
+.tech,
+.contact{
+    height: 100%;
+}
+
+/* HEADING FONT */
+.services h2,
+.tech h2,
+.contact h2{
+    font-size: 200%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* GIVING SPAN THE PRIMARY COLOR */
+h1 span,
+.hero .left h2 span,
+.about .right h2 span,
+.about .right h3 span,
+.services .heading h2 span,
+.tech .heading h2 span,
+.tech h3 span,
+.contact .heading span {
+    color: var(--primary-color);
+}
+
+/* *************************************** */
+/* -----------HEADER-------------------- */
+/* *************************************** */
+header{
+    height: 100vh;
+    overflow-y:hidden;
+    position: relative;
+    /* background: linear-gradient(var(--gradient-color-primary), var(--gradient-color-body-background), var(--gradient-color-primary)); */
+}
+.burger{
+    color: var(--primary-text);
+    cursor: pointer;
+    display: none;
+}
+/* SHAPES  */
+.bg-shapes{
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+    width: 550px;
+    height: 500px;
+    border-radius: 100% 0  0;
+    background-color: var(--primary-color);
+    animation: 1s ease-out 0s 1 animateBigShape;
+}
+.bg-shape1,.bg-shape2,.bg-shape3, .bg-shape4, .bg-shape5{
+    position: absolute;
+    border-radius: 100%;
+}
+.bg-shape1{
+    height: 100px;
+    width: 100px;
+    background-color:  var(--gradient-color-body-background);
+    opacity: .3;
+    top: 80%;
+    right: 5%;
+    animation: 12s ease-in-out 0s infinite animateShape;
+}
+ .bg-shape2{
+    height: 90px;
+    width: 90px;
+    background-color:  var(--primary-color);
+    opacity: .3;
+    top: 60%;
+    left: 5%;
+    animation: 7s ease-in-out 0s infinite animateShape;
+}
+.bg-shape3{
+    height: 150px;
+    width: 150px;
+    background-color:  var(--primary-color);
+    opacity: .4;
+    top: 75%;
+    left: 23%;
+    animation: 9s ease-in-out 0s infinite animateShape;
+}
+.bg-shape4{
+    height: 50px;
+    width: 50px;
+    background-color: var(--primary-color);
+    opacity: .5;
+    top: 42%;
+    left: 42%;
+    animation: 10s ease-in-out 0s infinite animateShape;
+}
+.bg-shape5{
+    height: 200px;
+    width: 200px;
+    background-color:  var(--primary-color);
+    opacity: .2;
+    top: 50%;
+    right: 35%;
+    animation: 15s ease-in-out 0s infinite animateShape;
+} 
+
+/* NAV------------------------- */
+nav{   
+    padding:30px 5px;
+}
+nav div a{
+    text-decoration: none;
+    margin-right: 50px;
+    text-transform: uppercase;
+    color: var(--primary-text);
+    transition: all .2s;
+}
+nav div a:hover{
+    padding-bottom:5px ;
+    color:var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+.darklink span{
+    color: var(--primary-text);
+    font-size: 24px;
+    transition: all .2s;
+    cursor: pointer;
+}
+.darklink span:hover{
+    color: var(--primary-color);
+}
+
+
+/* HERO SECTION--------------------- */
+.hero .left{
+    margin-top: -7%;
+}
+.hero .right{
+    margin-top: -3%;
+}
+.hero .myName{
+    font-size: 110%;
+    font-weight: 500;
+    animation: .5s ease-out 0s 1 myName;
+}
+h1{
+    font-size: 380%;
+    animation: .5s ease-out 0s 1 Tarun;
+}
+.hero .left h2 {
+    font-size: 170%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    animation: .7s ease-out 0s 1 Portfolio;
+}
+.hero .left .desc{
+    width: 80%;
+    margin-bottom: 3%;
+    line-height: 1.8;
+    animation: .83s ease-out 0s 1 Portfolio;
+}
+.hero .right img{
+    height:720px;
+    opacity: .95;
+    animation: 1.2s ease-out 0s 1 imageFade;
+}
+.hero .left button{
+    padding: 13px 20px;
+    animation: 1s ease-out 0s 1 cvBtn;
+}
+
+/* *************************************************** */
+/* ---------ABOUT ME SECTION------------------- */
+/* *************************************************** */
+.about{
+    position: relative;
+    padding: 8.7% 0;
+}
+.about .left {
+    /* width: 200px; */
+    overflow: hidden;
+    position: relative;
+}
+.about .left img{
+    height: 450px;
+    transition: all 1s;
+}
+.about .right{
+    margin-right: 2%;
+}
+.about .right h2{
+    font-size: 180%;
+    margin-bottom: 2.7%;
+}
+.about .right h3{
+    font-weight: 600;
+    font-size: 130%;
+    margin-bottom: 1.8%;
+}
+.about .right p{
+    font-family: 'lato', sans-serif;
+    font-size: 17px;
+    line-height: 2;
+    width: 80%;
+}
+.about .right .socials{
+margin-top: 2%;
+}
+.about .right .socials a{
+    font-size: 125%;
+    color: var(--primary-text);
+    margin-right: 1.3%;
+    transition: all .2s ease;
+}
+.about .right .socials a:hover{
+    color: var(--primary-color);
+}
+
+/* *************************************************** */
+/* ---------SERVICES SECTION------------------- */
+/* *************************************************** */
+.services{
+    height: 100%; 
+    padding: 5% 0;
+    background-image:  linear-gradient(to right,var(--gradient-color-primary), var(--gradient-color-body-background), var(--gradient-color-primary)), url('../Images/services-bg.png');   
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+fieldset{
+    border: 4px solid var(--primary-color);
+    padding: 3%;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .2s;
+}
+fieldset:hover{
+    background-color: var(--gradient-color-body-background);
+    transform: scale(1.02);
+    box-shadow: 0 0 3px var(--primary-text);
+}
+fieldset legend{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 120%;
+}
+fieldset p{
+    line-height: 1.8;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin-left: 7.4%;
+}
+.services-list-div{
+    width: 70%;
+    height: 90%;
+}
+
+/* *************************************************** */
+/* ---------TECHNOLOGIES USED SECTION------------------- */
+/* *************************************************** */
+.tech h2{
+    margin-bottom: 3%;
+}
+/* .tech .tech-list .frontend-tech img,
+.tech .tech-list .backend-tech img{
+    height: 100px;
+} */
+.tech-list i{
+    font-size: 50px;
+}
+.frontend-tech,
+.backend-tech{
+    margin: 40px 0;
+}
+.tech h3,
+.tech .tech-list p{
+    text-align: center;
+    text-transform: uppercase;
+}
+.tech h3{
+    font-size:170%;
+}
+.frontend h3,
+.backend h3{
+    margin-bottom: 2%;
+}
+
+/* *************************************************** */
+/* ---------CONTACT ME SECTION------------------- */
+/* *************************************************** */
+.contact{
+box-shadow: 0 0 1px var(--primary-text);
+height: 100vh;
+background: var(--white) ;
+}
+.form{
+    padding: 3%;
+    width: 100%;
+    margin: 5% auto 2%;
+}
+.form div{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.form input, .form textarea{
+    background-color: var(--body-background);
+} 
+.form input{
+    width: 90%;
+}
+.form textarea{
+    width: 95%;
+}
+.form input,
+.form textarea{
+    border-radius: 5px;
+    border: 0.3px solid var(--primary-text-outline);
+    margin-bottom: 20px;
+    padding: 10px ;
+    outline: none;
+    transition: all .2s;
+}
+.form .submit-btn{
+    width: 95%;
+}
+.form input:focus{
+    transform: scale(1.1);
+}
+.form textarea:focus{
+    transform: scale(1.06);
+}
+
+/* *************************************************** */
+/* ---------FOOTER SECTION------------------- */
+/* *************************************************** */
+footer{
+    height: 90vh;
+    background: linear-gradient(45deg, var(--primary-color) 60%, var(--gradient-color-primary));
+    color: var(--body-background);
+    margin-bottom: 30px;
+}
+footer .container{
+    flex-direction: column;
+}
+footer .text {
+    text-align: center;
+    margin-bottom: 10px;
+}
+footer .text p:nth-child(1){
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+footer .social-links{
+    margin-bottom: 50px;
+}
+footer .social-links a{
+    margin: 30px;
+    border: 1px solid var(--white);
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--white);
+    transition: all .2s;
+}
+footer .social-links a:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--body-background);
+}
+.copyright p{
+    font-size: 15px;
+}
+
+
+
+
+

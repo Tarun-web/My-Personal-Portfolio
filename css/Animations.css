@@ -1,0 +1,96 @@
+@keyframes myName{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Tarun {
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Portfolio{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cvBtn{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageFade{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: .0;
+    }
+    100%{
+        opacity: .95;
+    }
+}
+
+
+
+/* animationss for shapes in header section */
+@keyframes animateBigShape{
+    0%{
+        border-radius: 0%;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        border-radius: 100% 0 0 0;
+    }
+}
+
+
+@keyframes animateShape{
+    0%{
+        transform: rotate3d(0,0,0,0);
+    }
+    100%{
+        transform: rotate3d(0,1,0,180deg);
+        top: 0%;
+        opacity: 0;
+    }
+}

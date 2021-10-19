@@ -1,0 +1,52 @@
+@media screen  and (max-width: 400px){
+    .flex{
+        flex-wrap: wrap;
+    }
+    html{
+        width: 100%;
+    }
+    body,
+    html{
+        /* width: 100%; */
+        margin: 0;
+        padding: 0;
+        /* overflow: hidden; */
+        overflow-x: hidden;
+    }
+   
+
+/* *************************************************** */
+/* ---------HEADER SECTION------------------- */
+/* *************************************************** */
+
+    header{
+        background-image: url('../Images/services-bg.png');
+        overflow-x: hidden;
+        z-index: 1;
+        position: relative;
+        height: 100vh;
+    }
+    .bg-shapes{
+       display: none;
+    }
+    .hero .right img{
+      display: none;
+    }
+
+    .navlinks{
+        display: none;
+    }
+
+/* *************************************************** */
+/* ---------ABOUT ME SECTION------------------- */
+/* *************************************************** */
+    .about .container{
+        flex-direction: column;
+    }
+
+/* *************************************************** */
+/* ---------SERVICES SECTION------------------- */
+/* *************************************************** */    
+
+   
+}
