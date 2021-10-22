@@ -18,6 +18,10 @@ align-items: center;
     flex-direction: column;
 }
 
+.center{
+    text-align: center;
+}
+
 
 /* BUTTONS */
 .btn-primary{
