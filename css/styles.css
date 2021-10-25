@@ -11,6 +11,11 @@
 }
 html{
     background-color: var(--body-background);
+    scroll-behavior: smooth;
+}
+::selection{
+    background: var(--primary-color);
+    color: var(--body-background);
 }
 body{
     font-family: 'Poppins', sans-serif;
