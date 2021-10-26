@@ -86,6 +86,11 @@ header{
     cursor: pointer;
     display: none;
 }
+.burger-cross{
+    display: none;
+    transition: all 0.2s;
+}
+
 /* SHAPES  */
 .bg-shapes{
     position: absolute;
