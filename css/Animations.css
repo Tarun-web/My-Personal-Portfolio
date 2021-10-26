@@ -99,19 +99,21 @@
 /* js navbar animation */
 @keyframes animateNav{
     0%{
-        transform: translateX(-120%);
+        transform: translateX(-120%) scale(0);
     }
     100%{
-        transform: translateX(0%);
+        transform: translateX(0%) scale(1);
     }
 }
 
 @keyframes animateNavBack{
     0%{
         transform: translateX(0%);
+       
     }
     100%{
         transform: translateX(-120%);  
+        
     }
 }
 

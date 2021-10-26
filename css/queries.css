@@ -114,6 +114,9 @@
         display: block;
     
     }
+    .about{
+        height: 100%;
+    }
     
 /* *************************************************** */
 /* ---------TECH SECTION------------------- */
@@ -122,6 +125,22 @@
         padding: 10px 30px;
 
     }
+
+/* *************************************************** */
+/* ---------CONTACT ME SECTION------------------- */
+/* *************************************************** */  
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services-list{
+    grid-template-columns: repeat(1, 1fr);
+}
+.services-list-div{
+    width: 85%;
+    background-color: var(--gradient-color-body-background);
+}
 
 
 
