@@ -3,6 +3,7 @@
 @import "./Animations.css";
 @import "./flip-card.css";
 @import "./info-modal.css";
+@import "./toggle-switch.css";
 /* @import "./queries.css"; */
 *{
     padding: 0;
@@ -177,13 +178,10 @@ nav div a:hover{
 }
 .darklink span{
     color: var(--primary-text);
-    font-size: 24px;
-    transition: all .2s;
-    cursor: pointer;
+    font-size: 28px;
+    margin-right: 10px;
 }
-.darklink span:hover{
-    color: var(--primary-color);
-}
+
 
 
 /* HERO SECTION--------------------- */

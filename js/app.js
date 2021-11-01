@@ -9,7 +9,9 @@ document.querySelector('.cross-js').addEventListener('click', ()=>{
 })
 
 
-
+// ------------------------------------------
+// ------BURGER NAVBAR
+// ------------------------------------------
 const burger = document.querySelector('.burger-js');
 burger.addEventListener('click', ()=>{
 
@@ -26,6 +28,35 @@ burger.addEventListener('click', ()=>{
     document.querySelector('.navlinks').classList.remove('navlinks-js')
 
 })
+
+// ------------------------------------------
+// ------DARK MODE
+// ------------------------------------------
+
+const darkmode = ()=>{
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.querySelector('.darkMode').classList.replace('fa-moon', 'fa-sun')
+    localStorage.setItem('data-theme', 'dark')
+}
+const lightmode = ()=>{
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.querySelector('.darkMode').classList.replace('fa-sun', 'fa-moon')
+    localStorage.setItem('data-theme', 'light')
+}
+
+
+
+document.querySelector('.switch-js').addEventListener('change', (e)=>{
+    if(e.target.checked){
+        darkmode()
+    }else{
+        lightmode()
+    }
+})
+
+if(localStorage.getItem('data-theme')==='dark'){
+    darkmode()
+}
 
 
 
