@@ -1,9 +1,9 @@
 @import "./utilities.css";
-@import "./css_color_variables.css";
 @import "./Animations.css";
 @import "./flip-card.css";
 @import "./info-modal.css";
 @import "./toggle-switch.css";
+@import "./css_color_variables.css";
 /* @import "./queries.css"; */
 *{
     padding: 0;
@@ -348,7 +348,7 @@ fieldset p{
 .contact{
 box-shadow: 0 0 1px var(--primary-text);
 height: 100vh;
-background: var(--white) ;
+background: var(--body-backgorund) ;
 }
 .form{
     padding: 3%;
@@ -361,7 +361,7 @@ background: var(--white) ;
     text-align: center;
 }
 .form input, .form textarea{
-    background-color: var(--body-background);
+    /* background-color: var(--primary-text); */
 } 
 .form input{
     width: 90%;
@@ -394,8 +394,8 @@ background: var(--white) ;
 footer{
     height: 90vh;
     background: linear-gradient(45deg, var(--primary-color) 60%, var(--gradient-color-primary));
-    color: var(--body-background);
-    margin-bottom: 30px;
+    color: var(--primary-text);
+    /* margin-bottom: 30px; */
 }
 footer .container{
     flex-direction: column;
@@ -427,7 +427,7 @@ footer .social-links a{
 }
 footer .social-links a:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 10px var(--body-background);
+    box-shadow: 0 0 10px #fff;
 }
 .copyright p{
     font-size: 15px;
