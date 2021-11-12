@@ -36,11 +36,16 @@ burger.addEventListener('click', ()=>{
 const darkmode = ()=>{
     document.documentElement.setAttribute('data-theme', 'dark');
     document.querySelector('.darkMode').classList.replace('fa-moon', 'fa-sun')
+    document.querySelector('footer').style.background="var(--primary-color)";
+    document.querySelector('.navlinks').style.background='#3f3f3f'
+
     localStorage.setItem('data-theme', 'dark')
+
 }
 const lightmode = ()=>{
     document.documentElement.setAttribute('data-theme', 'light');
     document.querySelector('.darkMode').classList.replace('fa-sun', 'fa-moon')
+    document.querySelector('.navlinks').style.background='#f5f5f5'
     localStorage.setItem('data-theme', 'light')
 }
 
@@ -55,6 +60,7 @@ document.querySelector('.switch-js').addEventListener('change', (e)=>{
 })
 
 if(localStorage.getItem('data-theme')==='dark'){
+    document.querySelector('.checked-js').checked=true;
     darkmode()
 }
 
